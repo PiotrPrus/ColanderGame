@@ -1,11 +1,20 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colanderPink</item>
+        <item name="colorPrimaryDark">@color/colanderPurple</item>
+        <item name="colorAccent">@color/colanderLightBlue</item>
+        <item name="buttonStyle">@style/mainButton</item>
+        <item name="android:background">@color/colanderLightBlue</item>
+    </style>
+
+    <style name="mainButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/main_button_background</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:textColor">@color/allWhite</item>
     </style>
 
 </resources>
