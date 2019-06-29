@@ -10,6 +10,12 @@ class StartFragment : BaseVMFragment<StartViewModel, FragmentStartBinding>(Start
 
     override fun start() {
         binding.viewModel = viewModel
+        viewModel.onPlayButtonClickEvent.observeEvent {
+            //TODO: Open second screen or guide
+        }
+        viewModel.onGameRulesClickEvent.observeEvent {
+            //TODO: Open game rules
+        }
     }
 
 //    override val onBackPressedHandler: (() -> Boolean) = {

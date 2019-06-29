@@ -19,31 +19,33 @@
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="140dp"/>
         <Button
-                android:text="play"
+                android:text="@string/start_play_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/mainPlayButton"
+                android:onClick="@{() -> viewModel.onPlayClicked()}"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp" android:layout_marginTop="80dp"
+                android:layout_marginEnd="@dimen/start_horizontal_btn_margin" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/start_horizontal_btn_margin" android:layout_marginTop="80dp"
                 app:layout_constraintHorizontal_bias="0.0"/>
         <Button
-                android:text="game rules"
+                android:text="@string/start_game_rules_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.onGameRulesClicked()}"
                 android:id="@+id/mainGameRulesButton" android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@+id/mainPlayButton" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginEnd="@dimen/start_horizontal_btn_margin" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/start_horizontal_btn_margin"/>
         <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_info_details"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_info_24px"
                 android:id="@+id/mainInfoIcon" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
                 android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/mainVersionNumber"/>
         <TextView
-                android:text="TextView"
-                tools:text="ver. 1.0.3-alpha"
+                android:text="X.X.X"
+                tools:text="ver. 1.0.3"
                 android:textColor="@color/allWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
