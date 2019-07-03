@@ -5,4 +5,9 @@
 
     <fragment android:id="@+id/startFragment" android:name="com.piotrprus.colandergame.feature.start.StartFragment"
               android:label="StartFragment"/>
+    <fragment android:id="@+id/guideFragment"
+              android:name="com.piotrprus.colandergame.common.ui.customviews.guide.GuideFragment"
+              android:label="GuideFragment">
+        <argument android:name="guideType" app:argType="com.piotrprus.colandergame.common.data.GuideType"/>
+    </fragment>
 </navigation>
