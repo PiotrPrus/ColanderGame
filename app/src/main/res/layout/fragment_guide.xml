@@ -22,7 +22,7 @@
                 android:layout_marginEnd="16dp" android:layout_marginTop="62dp"
                 app:layout_constraintTop_toTopOf="parent"/>
         <TextView
-                app:textRes="@{viewModel.guideTextRes}"
+                app:htmlTextRes="@{viewModel.guideTextRes}"
                 android:background="@color/colanderPurple"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -38,15 +38,19 @@
                 android:text="@string/generic_ok"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.okButtonClicked()}"
                 android:id="@+id/guideButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
                 android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
         <CheckBox
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/allWhite"
                 android:buttonTint="@color/allWhite"
                 android:textSize="20sp"
+                android:text="@string/do_not_show_this_guide_again"
+                android:checked="@={viewModel.guideShowStateCheck}"
                 android:id="@+id/guideCheckBox" app:layout_constraintStart_toStartOf="@+id/guideButton"
                 app:layout_constraintEnd_toEndOf="@+id/guideButton" android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/guideButton" tools:text="Do not show this guide again"/>

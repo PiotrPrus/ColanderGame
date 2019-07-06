@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="allWhite">#ffffff</color>
+    <color name="allBlack">#000000</color>
     
     <color name="colanderLightBlue">#8FD2EA</color>
     <color name="colanderPink">#EA7EBB</color>

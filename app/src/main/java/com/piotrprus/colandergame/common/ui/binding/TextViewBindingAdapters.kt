@@ -14,3 +14,9 @@ fun TextView.htmlStyled(coloredString: String) {
 fun TextView.textFromResources(textRes: Int) {
     setText(textRes)
 }
+
+@BindingAdapter("htmlTextRes")
+fun TextView.htmlTextFromResources(htmlTextRes: Int) {
+    val stringEquivalent = resources.getString(htmlTextRes)
+    text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) Html.fromHtml(stringEquivalent, 0) else Html.fromHtml(stringEquivalent)
+}

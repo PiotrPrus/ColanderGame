@@ -6,4 +6,5 @@
     <string name="empty_string"> </string>
 
     <string name="guide_create_teams"><![CDATA[To play <font color=#FDED73>Colander game </font>you need to create teams. We recommend 2-person teams for best game experience. ]]></string>
+    <string name="do_not_show_this_guide_again">Do not show this guide again</string>
 </resources>

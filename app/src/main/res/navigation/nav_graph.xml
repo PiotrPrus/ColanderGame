@@ -4,10 +4,16 @@
             android:id="@+id/nav_graph" app:startDestination="@id/startFragment">
 
     <fragment android:id="@+id/startFragment" android:name="com.piotrprus.colandergame.feature.start.StartFragment"
-              android:label="StartFragment"/>
+              android:label="StartFragment">
+        <action android:id="@+id/action_startFragment_to_guideFragment" app:destination="@id/guideFragment"/>
+    </fragment>
     <fragment android:id="@+id/guideFragment"
               android:name="com.piotrprus.colandergame.common.ui.customviews.guide.GuideFragment"
               android:label="GuideFragment">
         <argument android:name="guideType" app:argType="com.piotrprus.colandergame.common.data.GuideType"/>
+        <action android:id="@+id/action_guideFragment_to_teamsListFragment" app:destination="@id/teamsListFragment"/>
     </fragment>
+    <fragment android:id="@+id/teamsListFragment"
+              android:name="com.piotrprus.colandergame.feature.teamslist.TeamsListFragment"
+              android:label="TeamsListFragment"/>
 </navigation>

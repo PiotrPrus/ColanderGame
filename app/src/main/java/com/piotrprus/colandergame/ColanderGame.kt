@@ -1,6 +1,7 @@
 package com.piotrprus.colandergame
 
 import android.app.Application
+import com.piotrprus.colandergame.common.di.preferencesModule
 import com.piotrprus.colandergame.common.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -12,7 +13,7 @@ class ColanderGame : Application() {
         startKoin {
             androidLogger()
             androidContext(this@ColanderGame)
-            modules(viewModelModule)
+            modules(listOf(viewModelModule, preferencesModule))
         }
     }
 }
